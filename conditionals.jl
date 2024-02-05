@@ -10,3 +10,4 @@ else
 end
 ## yukaridakinin kısa hali
 (x > y ? println(" x büyüktür y den") : println("x küçüktür yden"))
+(x > y) && println("$x büyüktür $y den && ile")
