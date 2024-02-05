@@ -26,4 +26,6 @@ str  = "long string"
 substr = SubString(str,1,4)
 typeof(substr)
 @views typeof(str[1:4])
+str[1:4]
+@views str[1:4]#views görünüm oluşturur yani bellek ten kazanç için strr referans kullarak görüntü oluşturur
 #sayfa 61 kalındı chap 7.3

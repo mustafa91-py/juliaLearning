@@ -33,4 +33,52 @@ println(sizeof(x))
 println(sizeof(y))
 println(sizeof(z))
 #sayfa 33 de kalındı
+#büyük sayılar da işlemler
+x = big"2"+1
+typeof(x)
+y = 2
+typeof(y)
+a = 123456789012345678901234567890   # Int türü
+b = big"123456789012345678901234567890"  # BigInt türü
+a = 999999999999999999999999999999999
+b = big"999999999999999999999999999999999"
+result1 = a * a  # Taşma riski olabilir overflow
+result2 = b * b  # Doğru sonuç elde edilir
 
+println(result1)
+println(result2)
+string(big"10"^2,base=2)
+parse(BigInt,"333")#parse metinsel sayıları ilk param daki türe dönüştürür
+
+result1 = setrounding(BigFloat, RoundUp) do
+    BigFloat(1) + parse(BigFloat, "0.1")
+end
+
+result2 = setrounding(BigFloat, RoundDown) do
+    BigFloat(1) + parse(BigFloat, "0.1")
+end
+BigFloat(1)+parse(BigFloat,"0.1")
+
+result3 = setprecision(40) do
+    BigFloat(1) + parse(BigFloat, "0.1")
+end
+BigFloat(1)+parse(BigFloat,"0.1")
+# polinomların kullanımı
+deneme = begin
+    x =7
+    Int(3x+x)
+end
+x = 3
+5x
+(x-1)*(x+1)
+x*(x+1)
+#0 ve 1 dönüşümleri
+zero(Float16)
+zero(Float32)
+zero(Float64)
+zero(5.0)
+one(Int8)
+one(Int128)
+one(Int32)
+one(BigFloat)
+one(BigInt)
